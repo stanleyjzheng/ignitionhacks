@@ -1,12 +1,10 @@
 
-The following is my submission for Division Sigma (NLP Tweet classification). This hackathon is a 2 day hackathon, but I have an appointment, so only have about 15 hours. Many corners were cut, but I tried my best to preserve performance.
-
 ## Details
 - Model: Huggingface roBERTa base pretrainedtrained by JPLU https://huggingface.co/jplu/tf-xlm-roberta-base
 - Tokenizer: Autotokenizer using jplu/tf-xlm-roberta-base weights
 - "Ensembled" different hyperparameters by averaging CSV's (may or may not make it to final model, check GitHub)
 - Cross-validation: Random data from train
-- Pseudolabelling 2 folds at 10 epochs (check GitHub to make sure, as I change this frequently)
+- Pseudolabelling 2 folds at 10/12 epochs (check GitHub to make sure, as I change this frequently)
 
 Training time is about 7 hours on a P100 and about 4-5 hours for inference (due to pseudolabelling, which takes a while).
 
