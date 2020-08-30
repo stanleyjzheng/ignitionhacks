@@ -1,9 +1,9 @@
 
 ## Details
-- Model: Huggingface roBERTa base pretrainedtrained by JPLU https://huggingface.co/jplu/tf-xlm-roberta-base
-- Tokenizer: Autotokenizer using jplu/tf-xlm-roberta-base weights
+- Model: Huggingface roBERTa base pretrainedtrained by [JPLU](https://huggingface.co/jplu/tf-xlm-roberta-base), see [paper](https://arxiv.org/abs/1911.02116)
+- Tokenizer: Autotokenizer using jplu/tf-xlm-roberta-base weights, see paper above
 - Validation: Random data from train
-- Pseudolabelling 2 folds at 10/12 epochs 
+- Pseudolabelling 2 rounds at 10/12 epochs 
 
 Training time is about 7 hours on a P100 and about 4-5 hours for inference (due to pseudolabelling, which takes a while).
 
@@ -24,8 +24,6 @@ Due to the time constraints, there are many areas I could/want to improve.
 - Relatively effective, quick cross-validation
 - Pseudolabelling in 16 hours! I'm super proud of this, and it's probably the reason my model performs so well.
 
-Thanks for reading, and please check out the Github link below. If you do data science competitions, please follow me on Kaggle. I'd love to work together - https://www.kaggle.com/stanleyjzheng
-
 ## Aug 30 documentation update
 
 First of all, thanks to Dev for evaluating my tons of CSV's so that I can understand what makes them work. I did a ton of experimenting throughout the competition, so naturally, I have quite a few CSV's. Out of luck, I happened to submit the CSV that performed the best. Here is what helped me the most.
@@ -44,4 +42,4 @@ If you would like to learn more about pseudolabelling for computer vision, pleas
 
 Truth be told, I've never done 2 rounds with a model before; Kaggle requires final submissions take less than 6 hours on an Nvidia Tesla P100 (so most of my past submissions would run out of time for 2 rounds), while mine took more than 4 hours on 2x Nvidia Tesla P100. Most of these steps were luck; I got lucky 2 rounds worked better than 1, and that pseudolabelling worked at all. I fully admit that luck played a large part in my scores. If the final test data had been hand-labelled, I would no doubt have gotten under 80%. These are just things you have to deal with when it comes to competitive data science; knowing what your data is made up of is extremely important. Theoretically, one could do 3 or more folds, in fact, the current [ImageNet SoTA](https://arxiv.org/abs/1911.04252) uses 3 iterations, but I decided against it. There is increased risk of error propogation, as well as diminishing returns. With no validation for my pseudolabels, I didn't want to risk it.
 
-I am extremely happy with my score and just wanted to share a few of the reasons for it. Thanks for being such a great community, I had a ton of fun! I wish everyone who participated in this competition the best of luck, and please feel free to message me on Discord at Stanley#1933 if you have any questions. I will put any FAQ below.
+I am extremely happy with my score and just wanted to share a few of the reasons for it. Thanks for being such a great community, I had a ton of fun! I wish everyone who participated in this competition the best of luck, and please feel free to message me on Discord at Stanley#1933 if you have any questions.
